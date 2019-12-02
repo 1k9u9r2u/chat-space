@@ -1,0 +1,29 @@
+.messages
+
+
+.chat
+  .header
+    .left-header
+      .left-header__title
+        グループ名  yosikawa
+      %ul.left-header__members
+        Member：
+        %li.member
+          メンバー名   aaaa
+        %li.member
+          メンバー名   aaaa
+        %li.member
+          メンバー名  aaaaa
+    .right-header
+      .right-header__button
+        =link_to 'Edit',"http://localhost:3000/groups/new" 
+  .messages
+    = render @messages
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
