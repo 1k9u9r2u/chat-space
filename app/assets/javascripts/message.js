@@ -4,39 +4,39 @@ $(function(){
     if (message.image) {
       var html = //メッセージに画像が含まれる場合のHTMLを作る
       `<div class="message" data-message-id=${message.id}>
-      <div class="upper-message">
-      <div class="upper-message__user-name">
-      ${message.user_name}
+        <div class="upper-message">
+         <div class="upper-message__user-name">
+           ${message.user_name}
+        </div>
+        <div class="upper-message__date">
+           ${message.date}
+        </div>
       </div>
-      <div class="upper-message__date">
-      ${message.date}
-      </div>
-      </div>
-      <div class="lower-message">
-      <p class="lower-message__content">
-      ${message.content}
-      </p>
-      </div>
-      <img src=${message.image} >
-    </div>`
+       <div class="lower-message">
+         <p class="lower-message__content">
+           ${message.content}
+         </p>
+       </div>
+       <img src=${message.image} >
+     </div>`
     return html;
   } else {
     var html = //メッセージに画像が含まれない場合のHTMLを作る
-    `<div class="message" data-message-id=${message.id}>
-    <div class="upper-message">
-    <div class="upper-message__user-name">
-    ${message.user_name}
-    </div>
-    <div class="upper-message__date">
-    ${message.date}
-    </div>
-    </div>
-    <div class="lower-message">
-    <p class="lower-message__content">
-    ${message.content}
-    </p>
-    </div>
-    </div>`
+     `<div class="message" data-message-id=${message.id}>
+        <div class="upper-message">
+          <div class="upper-message__user-name">
+            ${message.user_name}
+          </div>
+          <div class="upper-message__date">
+            ${message.date}
+          </div>
+        </div>
+        <div class="lower-message">
+          <p class="lower-message__content">
+            ${message.content}
+          </p>
+        </div>
+     </div>`
     return html;
       };
     }
