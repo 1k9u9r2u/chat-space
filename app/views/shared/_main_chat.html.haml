@@ -5,15 +5,10 @@
   .header
     .left-header
       .left-header__title
-        グループ名  aaa
+        = @group.name
       %ul.left-header__members
         Member：
-        %li.member
-          メンバー名   aaaa
-        %li.member
-          メンバー名   aaaa
-        %li.member
-          メンバー名  aaaaa
+        %li.member    
     .right-header
       .right-header__button
         =link_to 'Edit',"http://18.177.194.232/groups/new" 
