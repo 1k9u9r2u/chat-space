@@ -1,6 +1,3 @@
-
-
-
 .chat
   .header
     .left-header
@@ -8,10 +5,13 @@
         = @group.name
       %ul.left-header__members
         Member：
-        %li.member    
+        - @group.users.each do |user|
+          %li.member    
+            = user.name
     .right-header
       .right-header__button
-        =link_to 'Edit',"http://18.177.194.232/groups/new" 
+        = link_to Edit_group_path(@group) do
+
   .messages
     = render @messages
   .form
