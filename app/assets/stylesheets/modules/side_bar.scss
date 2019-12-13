@@ -3,7 +3,7 @@
   color: $white;
   width: 300px;
   .header {
-    background-color: $side_blue_dark;
+    background-color: yellow;
     height: 100px;
     line-height: 100px;
     padding: 0 20px;
@@ -26,7 +26,7 @@
   }
 
   .groups {
-    background-color: $side_blue_light;
+    background-color: rosybrown;
     height: calc(100vh - 100px);
     padding: 0 20px;
     overflow: scroll;
