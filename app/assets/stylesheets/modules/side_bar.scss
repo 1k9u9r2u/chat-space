@@ -1,5 +1,6 @@
 .side-bar {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: $white;
   width: 300px;
   .header {
@@ -30,9 +31,11 @@
     height: calc(100vh - 100px);
     padding: 0 20px;
     width: 300px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     .group {
-      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
       padding: 20px 0 40px;
       &__name {
         font-size: $side_group_name;
